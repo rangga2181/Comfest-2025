@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SEA Catering - Healthy Meals, Anytime, Anywhere</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <a href="index.html" class="nav-brand">SEA Catering</a>
+        <div id="nav-dynamic-content"></div>
+    </nav>
+    
+    <div class="container" id="homepage-content">
+        <section class="page-section" style="display:block;">
+            <div class="hero">
+                <h1>Healthy Meals, Anytime, Anywhere</h1>
+                <p>Selamat datang di SEA Catering! Solusi katering sehat dengan menu yang bisa disesuaikan, diantar ke seluruh Indonesia.</p>
+            </div>
+        </section>
+        
+        <section class="page-section" style="display:block;">
+            <h2>Pilihan Paket Menu Kami</h2>
+            <div class="meal-plans-grid">
+                <div class="meal-card"><img src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?q=80&w=2070" alt="Diet Plan"><div class="meal-card-content"><h3>Diet Plan</h3><p><strong>Rp 30.000/meal</strong></p><small>Rendah kalori, kaya serat, cocok untuk program penurunan berat badan.</small></div></div>
+                <div class="meal-card"><img src="https://images.unsplash.com/photo-1482049016688-2d3e1b311543?q=80&w=1910" alt="Protein Plan"><div class="meal-card-content"><h3>Protein Plan</h3><p><strong>Rp 40.000/meal</strong></p><small>Tinggi protein berkualitas untuk mendukung pembentukan massa otot.</small></div></div>
+                <div class="meal-card"><img src="https://images.unsplash.com/photo-1498837167922-ddd27525d352?q=80&w=2070" alt="Royal Plan"><div class="meal-card-content"><h3>Royal Plan</h3><p><strong>Rp 60.000/meal</strong></p><small>Menu premium dengan bahan-bahan organik untuk vitalitas maksimal.</small></div></div>
+            </div>
+        </section>
+
+        <section class="page-section" style="display:block;">
+            <h2>Testimoni Pelanggan</h2>
+            <div class="testimonial-grid">
+                <div class="testimonial-slider-wrapper">
+                    <h3>Kata Mereka Tentang Kami</h3>
+                    <div id="testimonial-slider" class="testimonial-slider">
+                        <div class="slider-nav">
+                            <button id="prev-slide">&lt;</button>
+                            <button id="next-slide">&gt;</button>
+                        </div>
+                    </div>
+                </div>
+                <div id="testimonial-form-container">
+                    <h3>Bagikan Pengalaman Anda</h3>
+                    <p>Silakan <a href="#" id="login-from-testimonial">login</a> untuk memberikan ulasan.</p>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <dialog id="auth-modal" class="modal-dialog">
+        <div class="page-section" style="margin:0; display:block;">
+            <div id="login-view" class="auth-container">
+                <form id="login-form"><h2>Login</h2><div class="form-group"><label for="login-email">Email</label><input type="email" id="login-email" name="email" required></div><div class="form-group"><label for="login-password">Password</label><input type="password" id="login-password" name="password" required></div><button type="submit" class="btn">Login</button><div id="login-status" class="status-message"></div></form><div class="form-toggle">Belum punya akun? <span onclick="toggleAuthView(false)">Daftar di sini</span></div>
+            </div>
+            <div id="register-view" class="auth-container" style="display:none;">
+                <form id="register-form"><h2>Registrasi</h2><div class="form-group"><label for="reg-name">Nama Lengkap</label><input type="text" id="reg-name" name="name" required></div><div class="form-group"><label for="reg-email">Email</label><input type="email" id="reg-email" name="email" required></div><div class="form-group"><label for="reg-password">Password</label><input type="password" id="reg-password" name="password" required><small>Min. 8 karakter, dgn huruf besar, kecil, angka, & simbol.</small></div><button type="submit" class="btn">Register</button><div id="register-status" class="status-message"></div></form><div class="form-toggle">Sudah punya akun? <span onclick="toggleAuthView(true)">Login di sini</span></div>
+            </div>
+        </div>
+    </dialog>
+
+    <script src="main.js"></script>
+</body>
+</html>

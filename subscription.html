@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Subscription - SEA Catering</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="navbar"><a href="index.html" class="nav-brand">SEA Catering</a><div id="nav-dynamic-content"></div></nav>
+    <div class="container">
+        <div id="auth-gate" class="page-section" style="display: none; text-align: center;">
+            <h2>Akses Ditolak</h2>
+            <p>Anda harus login terlebih dahulu untuk dapat mengakses halaman langganan.</p>
+            <a href="index.html" class="btn" style="width: auto;">Kembali ke Halaman Utama</a>
+        </div>
+        
+        <div id="subscription-content" style="display: none;">
+            <section class="page-section" style="display:block;">
+                <form id="subscription-form"><h2>Formulir Langganan</h2><p>Pilih paket dan sesuaikan jadwal Anda untuk mulai berlangganan.</p><div class="form-group"><label for="sub-name">Nama Lengkap</label><input type="text" id="sub-name" name="name" required readonly></div><div class="form-group"><label for="sub-phone">Nomor Telepon Aktif</label><input type="tel" id="sub-phone" name="phone" required></div><div class="form-group"><label>Pilih Paket</label><div class="options-group"><label><input type="radio" name="plan" value="diet" data-price="30000" required><span>Diet Plan</span></label><label><input type="radio" name="plan" value="protein" data-price="40000"><span>Protein Plan</span></label><label><input type="radio" name="plan" value="royal" data-price="60000"><span>Royal Plan</span></label></div></div><div class="form-group"><label>Jenis Makanan</label><div class="options-group"><label><input type="checkbox" name="meal_type" value="Breakfast"><span>Sarapan</span></label><label><input type="checkbox" name="meal_type" value="Lunch"><span>Makan Siang</span></label><label><input type="checkbox" name="meal_type" value="Dinner"><span>Makan Malam</span></label></div></div><div class="form-group"><label>Hari Pengiriman</label><div class="options-group"><label><input type="checkbox" name="delivery_days" value="Monday"><span>Senin</span></label><label><input type="checkbox" name="delivery_days" value="Tuesday"><span>Selasa</span></label><label><input type="checkbox" name="delivery_days" value="Wednesday"><span>Rabu</span></label><label><input type="checkbox" name="delivery_days" value="Thursday"><span>Kamis</span></label><label><input type="checkbox" name="delivery_days" value="Friday"><span>Jumat</span></label><label><input type="checkbox" name="delivery_days" value="Saturday"><span>Sabtu</span></label><label><input type="checkbox" name="delivery_days" value="Sunday"><span>Minggu</span></label></div></div><div class="form-group"><label for="allergies">Alergi atau Pantangan</label><textarea id="allergies" name="allergies" rows="3"></textarea></div><div id="price-calculator"><h3>Estimasi Biaya Langganan Bulanan</h3><div id="total-price-display">Rp 0</div></div><div id="subscription-status" class="status-message"></div><button type="submit" class="btn">Kirim Langganan</button></form>
+            </section>
+        </div>
+    </div>
+    <script src="main.js"></script>
+</body>
+</html>
